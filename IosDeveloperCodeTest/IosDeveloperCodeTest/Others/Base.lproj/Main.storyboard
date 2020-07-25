@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PUC-vq-BfR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code Test View Controller-->
+        <scene sceneID="X2a-1f-8ot">
+            <objects>
+                <viewController id="PUC-vq-BfR" customClass="CodeTestViewController" customModule="IosDeveloperCodeTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="unb-yS-iZF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-gP-ODf">
+                                <rect key="frame" x="127" y="806" width="160" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Fj3-1r-gkW"/>
+                                    <constraint firstAttribute="height" constant="48" id="RPc-LS-X9y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Api Call"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="2UZ-PP-fKe">
+                                <rect key="frame" x="8" y="52" width="398" height="746"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Mhi-Yp-ort">
+                                <rect key="frame" x="177" y="418" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Xsb-Mc-vl5"/>
+                                    <constraint firstAttribute="width" constant="60" id="bBE-qA-1MH"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2UZ-PP-fKe" firstAttribute="leading" secondItem="kNq-be-bjB" secondAttribute="leading" constant="8" id="0qU-JW-qHW"/>
+                            <constraint firstItem="Mhi-Yp-ort" firstAttribute="centerX" secondItem="unb-yS-iZF" secondAttribute="centerX" id="DWV-hi-Onr"/>
+                            <constraint firstItem="nAp-gP-ODf" firstAttribute="top" secondItem="2UZ-PP-fKe" secondAttribute="bottom" constant="8" id="JLr-JG-7BK"/>
+                            <constraint firstItem="kNq-be-bjB" firstAttribute="trailing" secondItem="2UZ-PP-fKe" secondAttribute="trailing" constant="8" id="O3W-rA-Mxn"/>
+                            <constraint firstItem="2UZ-PP-fKe" firstAttribute="top" secondItem="kNq-be-bjB" secondAttribute="top" constant="8" id="V5i-TT-upW"/>
+                            <constraint firstItem="Mhi-Yp-ort" firstAttribute="centerY" secondItem="unb-yS-iZF" secondAttribute="centerY" id="wDc-dL-b6e"/>
+                            <constraint firstItem="nAp-gP-ODf" firstAttribute="centerX" secondItem="unb-yS-iZF" secondAttribute="centerX" id="ydy-KY-e6k"/>
+                            <constraint firstItem="kNq-be-bjB" firstAttribute="bottom" secondItem="nAp-gP-ODf" secondAttribute="bottom" constant="8" id="zAO-ym-A4Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kNq-be-bjB"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Mhi-Yp-ort" id="bhm-jM-CUw"/>
+                        <outlet property="apiCallBtn" destination="nAp-gP-ODf" id="kEO-Bp-HYt"/>
+                        <outlet property="textView" destination="2UZ-PP-fKe" id="lGQ-mW-9Mq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLo-k5-TPC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
